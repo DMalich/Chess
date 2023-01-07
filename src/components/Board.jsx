@@ -32,11 +32,11 @@ function Board({ board, turn }) {
 
     return (
         <div className="board">
-            {currentBoard.map((piece, i) => {
-                <div className="cell" key={i}>
+            {currentBoard.map((piece, i) => (
+                <div key={i} className='cell'>
                     <BoardCell piece={piece} black={isBlack(i)} position={getPosition(i)} />
                 </div>
-            })}
+            ))}
         </div>
     )
 }

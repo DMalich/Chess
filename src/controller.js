@@ -17,7 +17,7 @@ export function initGame() {
 }
 
 function updateGame(pendingPromotion) {
-    const isGameOver = chess.isGameOver();
+    const isGameOver = chess.game_over;
 
     const newGame = {
         board: chess.board(),
@@ -46,7 +46,7 @@ function getGameResult() {
 
         if (chess.in_stalemate()) {
             reason = "Stalemate";
-        } else if (chess.insufficicent_material()) {
+        } else if (chess.insufficient_material()) {
             reason = "Insufficient material";
         } else if (chess.in_threefold_repetition()) {
             reason = "Position occured three or more times";
